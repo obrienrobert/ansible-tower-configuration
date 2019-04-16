@@ -65,7 +65,7 @@
 
 - name: create the provisioning_vars.yml
   template:
-    src: "/tmp/provisioning_vars.yml.j2"
+    src: "/var/lib/awx/projects/./_32__ansible_tower_credentials_project/files/provisioning_vars.yml.j2"
     dest: "/tmp/{{ oo_clusterid }}/{{ oo_clusterid }}_inventory.yml"
 
 - name: Create cluster inventory in tower
