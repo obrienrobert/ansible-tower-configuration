@@ -65,7 +65,7 @@
 
 - name: create the provisioning_vars.yml
   template:
-    src: "{{ found_files.files[0].path }}"
+    src: "/tmp/provisioning_vars.yml.j2"
     dest: "/tmp/{{ oo_clusterid }}/{{ oo_clusterid }}_inventory.yml"
 
 - name: Create cluster inventory in tower
