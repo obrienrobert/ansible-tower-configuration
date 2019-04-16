@@ -6,6 +6,7 @@
     name: "{{ item }}"
     organization: "secret"
     state: absent
+    tower_verify_ssl: '{{ tower_verify_ssl }}'
   with_items:
     - "{{ aws_cluster_name }}"
     - "{{ aws_cluster_name }}_provisioning_vars"
