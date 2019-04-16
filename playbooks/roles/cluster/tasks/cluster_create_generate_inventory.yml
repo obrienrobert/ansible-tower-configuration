@@ -51,6 +51,10 @@
     recurse: yes
   register: found_files
 
+- name: Debug
+  debug:
+    var: found_files
+
 - fail:
     msg: "No provisioning vars file found, is the credentials repo present and the inventory source up to date?"
   when: found_files is undefined
